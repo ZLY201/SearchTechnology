@@ -7,7 +7,8 @@ In this program, we use the following four method to solve your problem:
 2. Depth First Search
 3. Greedy Algorithm
 4. A* Algorithm
-If you want to use this program, you must input your graph, A and B with following format to the **Input Area**.
+
+If you want to use this program, you must input your graph, A and B with following format to the **Input Area**.    
 And when you want to run the A* Algorithm program, you should give me the **h(x)**(estimated value) for the all n nodes.
 
 First line contains two integer n and m which represent the node num and the edge num of your graph.
