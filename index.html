@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program</title>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <center><h1>Welcome to my program!</h1></center>
+    <hr/>
+    <div id="Readme" style="font-size: 20px;">
+        <h2>Readme</h2>
+            <p>
+                This is a program in order  to find a shortest path from node S to node T in a given graph.
+            </p>
+            <p>
+                In this program, we use the following four method to solve your problem:
+                <ol>
+                    <li>Breadth First Search</li>
+                    <li>Depth First Search</li>
+                    <li>Greedy Algorithm</li>
+                    <li>A* Algorithm</li>
+                </ol>
+            </p>
+            <p>
+                If you want to use this program, you must input your graph, A and B with following format to the <b>Input Area</b>.<br/>
+                And when you want to run the A* Algorithm program, you should give me the <b>h(x)</b>(estimated value) for the all n nodes.
+            </p>
+            <p>
+                First line contains two integer n and m which represent the node num and the edge num of your graph.
+            </p>
+            <p>
+                The next m lines each line contains three integer u, v and w represent there is a undirected edge from u to v and the weight is w.
+            </p>
+            <p>
+                The next Line contains two integer S and T.
+            </p>
+            <p>
+                To use A* Algorithm, please input one extra line contains n integers. The i-th integer represents h(i) for the node i.
+            </p>
+            <p>
+                Each two adjacent integers are separated by a space.
+            </p>
+            <p>
+                The result will be showed in <b>Result</b>.
+            </p>
+            <p>
+                <b>Hint: u, v, S, T are all in range[1, n] and w mustn't be smallar than 0.</b>
+            </p>
+            <p>
+                Of course, we prepare a <a target="_blank" href="sample.html">sample input</a> for you. Actually, this data is a classical problem called <b>Romanian Holiday Problem</b>.
+            </p>
+    </div>
+    <hr/>
+    <div id="Program" style="font-size: 20px;">
+        <div>
+            <h2 style="display: inline-block;">Program</h2>
+            &emsp;
+            <button onclick="Run()" style="height: 25px;">Run</button>
+            <div  id="tip" style="display: inline-block; color: black">(click here to run this program)</div>
+            <button onclick="Clear()" style="height: 25px;">Clear</button>
+            <div  id="tip" style="display: inline-block; color: black">(click here to Clear)</div>
+        </div>
+        <div style="width: 100%; text-align: center; margin: 0 auto;">
+            <table style="text-align: center; width: 100%; margin:0 auto">
+                <thead>
+                    <tr>
+                        <td><h3>Input Area</h3></td>
+                        <td><h3>Result</h3></td>
+                        <td><h3>Show</h3></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <textarea id="input" onchange="change()" placeholder="Input here." style="width: 80%; height: 500px; resize: none; font-size: 20px;"></textarea>
+                        </td>
+                        <td algin="center" style="text-align:center; margin:0 auto">
+                            <table style="text-align: left;  width: 60%; height: 500px; margin:0 auto">
+                                <thead>
+                                    <tr>
+                                        <td>Algorithm</td>
+                                        <td>Shortest Path</td>
+                                        <td>Run Time</td>
+                                        <td>Path</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Breadth First Search</td>
+                                        <td id="bfs_sp">0</td>
+                                        <td id="bfs_rt">0ms</td>
+                                        <td id="bfs_Path"><button onclick="show_path('bfs')">show</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Depth First Search</td>
+                                        <td id="dfs_sp">0</td>
+                                        <td id="dfs_rt">0ms</td>
+                                        <td id="dfs_Path"><button onclick="show_path('dfs')">show</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Greedy Algorithm</td>
+                                        <td id="ga_sp">0</td>
+                                        <td id="ga_rt">0ms</td>
+                                        <td id="ga_Path"><button onclick="show_path('ga')">show</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>A* Algorithm</td>
+                                        <td id="aa_sp">0</td>
+                                        <td id="aa_rt">0ms</td>
+                                        <td id="aa_Path"><button onclick="show_path('aa')">show</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td id="path" style="width: 20%;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <hr/>
+    <div id="Copyright" style="font-size: 20px; text-align: center;">
+            <span>Copyright©&nbsp;Copyright&nbsp;2020&nbsp;CUG_YZL&emsp;</span>
+            <span>China University of Geosciences (Wuhan)</span>
+            <div><span>email：2395680659@qq.com</span></div>
+            <div><span>Go over the mountain and someone will hear your story.</span></div>
+    </div>
+</body>
+</html>
