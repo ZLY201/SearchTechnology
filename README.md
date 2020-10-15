@@ -25,4 +25,4 @@ The result will be showed in **Result**.
 
 **Hint: u, v, S, T are all in range[1, n] and w mustn't be smallar than 0.**
 
-Of course, we prepare a <a href="https://zly201.github.io/SearchTechnology/sample.html">sample input<a> for you. Actually, this data is a classical problem called **Romanian Holiday Problem**.
+Of course, we prepare a <a target="_blank" href="https://zly201.github.io/SearchTechnology/sample.html">sample input<a> for you. Actually, this data is a classical problem called **Romanian Holiday Problem**.
